@@ -2,7 +2,10 @@ const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './index.js',
+    entry: [
+        './index.js',
+        './styles/index.css' 
+    ],
     output: {
         path: path.resolve(__dirname, '../dest'),
         filename: 'app.js',
@@ -21,10 +24,18 @@ module.exports = {
             {
               test: /\.modernizrrc(\.json)?$/,
               use: [ 'modernizr-loader', 'json-loader' ]
+            },
+            {
+              test: /\.css$/,
+              use: [{
+                  loader: 'style-loader'
+              }, {
+                  loader: 'css-loader'
+              }]
             }
         ]
     },
-    resolve: {
+        resolve: {
         alias: {
           modernizr$: path.resolve(__dirname, ".modernizrrc")
         }

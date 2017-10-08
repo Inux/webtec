@@ -1,0 +1,211 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+
+  /* Desktop variables */
+  --nav-height-desktop: 13%;
+  --footer-height-desktop: 6%;
+  --width-desktop: 62%;
+  --left-desktop: 19%;
+
+  /* Tablet variables */
+  --nav-height-tablet: 6%;
+  --footer-height-tablet: 3%;
+}
+
+/* Desktop */
+@media (min-width: 980px) { 
+    div#footer
+    {
+        position: fixed;
+        height: var(--footer-height-desktop);
+        width: var(--width-desktop);
+        bottom: 0;
+        left: var(--left-desktop);
+        right: 0;
+
+        overflow: hidden;
+
+        text-align:center;
+
+        background: #232323;
+        border:1px solid #ccc;
+        border-width:1px 0;
+    }
+
+    nav#navigation{
+        position: fixed;
+        height: var(--nav-height-desktop);
+        width: var(--width-desktop);
+        top: 0;
+        left: var(--left-desktop);
+        right: 0;
+
+        overflow: hidden;
+
+        text-align: center;
+
+        background: #232323;
+        border:1px solid #ccc;
+        border-width:1px 0;
+    }
+
+    nav#navigation ~ .overwrite{
+        display: none;
+    }
+
+    nav#navigation li { 
+        display: inline;
+    }
+
+    nav#navigation input, nav#navigation span{ 
+        display: none;
+    }
+
+    nav#navigation ul{
+        left: 0;
+    }
+
+    nav#navigation a{
+        display:inline-block;
+        padding:10px;
+    }
+
+    nav#navigation div#app{
+        position: relative;
+    }
+
+    nav#navigation div#menuToggle{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    div#content{
+        position: absolute;
+        width: var(--width-desktop);
+        top: var(--nav-height-desktop);
+        bottom: var(--footer-height-desktop);
+        left: var(--left-desktop);
+
+        overflow: scroll;
+        z-index: -1;
+    }
+}
+
+/* Tablet landscape */
+@media (min-width: 768px) and (max-width: 979px) /* and (orientation: landscape) */ { 
+    div#footer
+    {
+        position: fixed;
+        height: var(--footer-height-tablet);
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        overflow: hidden;
+
+        text-align:center;
+
+        background: #232323;
+        border:1px solid #ccc;
+        border-width:1px 0;
+    }
+
+    div#footer p
+    {
+        margin: 3px;
+    }
+
+    nav#navigation{
+        position: fixed;
+        height: var(--nav-height-tablet);
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        overflow: hidden;
+
+        text-align: center;
+
+        background: #232323;
+        border:1px solid #ccc;
+        border-width:1px 0;
+    }
+
+    nav#navigation ~ .overwrite{
+        display: none;
+    }
+
+    nav#navigation li { 
+        display: inline;
+    }
+
+    nav#navigation input, nav#navigation span{ 
+        display: none;
+    }
+
+    nav#navigation ul{
+        left: 0;
+    }
+
+    nav#navigation a{
+        display:inline-block;
+        padding:10px;
+    }
+
+    nav#navigation div#app{
+        position: relative;
+    }
+
+    nav#navigation div#menuToggle{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    div#content{
+        position: absolute;
+        width: 100%;
+        top: var(--footer-height-tablet);
+        bottom: var(--nav-height-tablet);
+        left: 0;
+
+        overflow: scroll;
+        z-index: -1;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    div#footer 
+    {
+        position: relative;
+        width: 100%;
+        top: 0;        
+    }
+
+    nav#navigation{
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    }
+
+    div#content{
+        width: 100%;
+        top: auto;
+        bottom: auto;
+    }
+}
+
