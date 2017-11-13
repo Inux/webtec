@@ -1,0 +1,65 @@
+body
+{
+    /* Generic variables */
+    --color-background: rgba(23,23,23,0);
+}
+
+/* Desktop landscape */
+@media (min-width: 980px) { 
+    nav#navigation{
+        overflow: hidden;
+        text-align: center;
+
+        border:1px solid #ccc;
+        border-width:1px 0;
+    }
+
+    nav#navigation ~ .overwrite{
+        display: none;
+    }
+
+    nav#navigation li { 
+        display: inline;
+    }
+
+    nav#navigation input, nav#navigation span{ 
+        display: none;
+    }
+
+    nav#navigation ul{
+        left: 0;
+    }
+
+    nav#navigation a{
+        display:inline-block;
+        padding:10px;
+    }
+
+    nav#navigation div#app{
+        position: relative;
+    }
+
+    nav#navigation div#menuToggle{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+/* Tablet landscape */
+@media (min-width: 768px) and (max-width: 979px) /* and (orientation: landscape) */ { 
+    nav#navigation{
+        border:1px solid #ccc;
+        border-width:0 1px 0 0;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    nav#navigation{
+        border:1px solid #ccc;
+        border-width:1px 0; 
+    }
+}
+

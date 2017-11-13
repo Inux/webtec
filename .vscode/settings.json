@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+        "client/node_modules/": true,
+        "client/yarn.lock": true,
+        ".gitignore": true,
+        "LICENSE": true
+    }
+}
