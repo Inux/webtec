@@ -2,6 +2,7 @@ body
 {
     /* Generic variables */
     --color-background: rgba(23,23,23,0);
+    --color-borders: #ccc;
 }
 
 /* Desktop landscape */
@@ -10,7 +11,7 @@ body
         overflow: hidden;
         text-align: center;
 
-        border:1px solid #ccc;
+        border:1px solid var(--color-borders);
         border-width:1px 0;
     }
 
@@ -50,7 +51,7 @@ body
 /* Tablet landscape */
 @media (min-width: 768px) and (max-width: 979px) /* and (orientation: landscape) */ { 
     nav#navigation{
-        border:1px solid #ccc;
+        border:1px solid var(--color-borders);
         border-width:0 1px 0 0;
     }
 }
@@ -58,7 +59,7 @@ body
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     nav#navigation{
-        border:1px solid #ccc;
+        border:1px solid var(--color-borders);
         border-width:1px 0; 
     }
 }

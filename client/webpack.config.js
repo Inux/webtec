@@ -5,7 +5,6 @@ module.exports = {
     entry: [
         './index.js',
         './styles/layout.css',
-        './styles/colors.css',
         './styles/content.css',
         './styles/nav.css',
         './styles/footer.css',
