@@ -4,7 +4,12 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: [
         './index.js',
-        './styles/index.css' 
+        './styles/layout.css',
+        './styles/colors.css',
+        './styles/content.css',
+        './styles/nav.css',
+        './styles/footer.css',
+        './styles/device_label.css'
     ],
     output: {
         path: path.resolve(__dirname, '../dest'),

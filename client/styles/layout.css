@@ -1,0 +1,123 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    /* Desktop variables */
+    --max-width-desktop: 62%;
+    --nav-height-desktop: 13%;
+    --footer-height-desktop: 6%;
+
+    /* Tablet variables */
+    --width-tablet: 94%;
+    --nav-width-tablet: 6%;
+    --footer-height-tablet: 3%;
+
+    /* Mobile variables */
+    --width-mobile: 100%;
+    --nav-height-mobile: 6%;
+    --footer-height-mobile: 3%;
+
+    background: #232323;
+    color: #cdcdcd;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+    nav#navigation{
+        position: absolute;
+        height: var(--nav-height-desktop);
+        min-width: 980px;
+        max-width: var(--max-width-desktop);
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    div#content{
+        position: absolute;
+        min-width: 980px;
+        max-width: var(--max-width-desktop);
+        top: var(--nav-height-desktop);
+        bottom: var(--footer-height-desktop);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    div#footer {
+        position: absolute;
+        height: var(--footer-height-desktop);
+        min-width: 980px;
+        max-width: var(--max-width-desktop);
+        bottom: 0;
+        left: var(--left-desktop);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 979px) /* and (orientation: landscape) */ { 
+    nav#navigation{
+        position: absolute;
+        height: 100%;
+        width: var(--nav-width-tablet);
+        top: 0;
+        left: 0;
+        bottom: var(--footer-height-tablet);
+    }
+
+    div#content{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: var(--footer-height-tablet);
+        left: var(--nav-width-tablet);
+    }
+
+    div#footer {
+        position: absolute;
+        height: var(--footer-height-mobile);
+        width: 100%;
+        bottom: 0;
+        left: var(--nav-width-tablet);
+        right: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    nav#navigation{
+        position: absolute;
+        height: var(--nav-height-mobile);
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    div#content{
+        position: absolute;
+        width: 100%;
+        top: var(--footer-height-mobile);
+        bottom: var(--nav-height-mobile);
+        right: 0;
+        left: 0;
+    }
+
+    div#footer {
+        position: absolute;
+        height: var(--footer-height-mobile);
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
