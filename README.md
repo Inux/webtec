@@ -42,4 +42,5 @@ yarn devserver
 ```
 
 open a browser and visit [http://localhost:8080/](http://localhost:8080/)
-Note: when another wepack-dev-server is running the port gets incremented by one (e.g 8081)
+
+**Note:** when another wepack-dev-server is running the port gets incremented by one (e.g 8081)
