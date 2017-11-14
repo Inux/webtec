@@ -1,3 +1,4 @@
 client/yarn.lock
 client/node_modules
 dest
+deploy.sh
