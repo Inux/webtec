@@ -49,8 +49,10 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'webtec',
+            title: 'WEBTEC website of Steve Ineichen',
+            author: 'Steve Ineichen',
+            copyright: '&copy; Steve Ineichen 2017',
             template: 'index-template.ejs'
-        })       
+        })    
     ]
 }
