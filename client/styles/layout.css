@@ -126,7 +126,7 @@ body
     
     nav#navigation{
         position: absolute;
-        height: var(--nav-height-mobile);
+        height: 100%;
         width: 80%;
         bottom: 0;
         right: 0;

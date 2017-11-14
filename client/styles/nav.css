@@ -9,19 +9,20 @@ body
 /* Desktop landscape */
 @media (min-width: 980px) { 
     div#navigationText{
+        text-align: center;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
     }
 
-    nav#navigationText h1{
+    div#navigationText h1{
         margin: 0 auto;
         font-size: 20px; 
         font-size: 3.5vh; 
     }
 
-    nav#navigationText p{
+    div#navigationText p{
         margin: 0 auto;
         font-size: 20px; 
         font-size: 1.5vh;
@@ -30,6 +31,9 @@ body
     nav#navigation{
         overflow: hidden;
         text-align: center;
+        margin: 0 auto;
+        font-size: 20px; 
+        font-size: 1.5vh;
 
         border:1px solid var(--color-borders);
         border-width:1px 0;
@@ -41,13 +45,13 @@ body
 
     nav#navigation div#menuToggle{
         position: absolute;
-        height: 30%;
-        bottom: 0;
+        margin: 5px auto;
         left: 0;
         right: 0;
     }
 
     nav#navigation ul#menuItems{
+
         margin: 0 0;
         padding: 0 0;
     }
@@ -77,35 +81,35 @@ body
 
 /* Tablet landscape */
 @media (min-width: 768px) and (max-width: 979px) /* and (orientation: landscape) */ { 
+    div#navigationText{
+        position: absolute;
+        height: 20%;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        border:1px solid var(--color-borders);
+        border-width:0 1px 0 0; 
+    }
+
+    div#navigationText h1{
+        margin: 0 auto;
+        font-size: 10px; 
+        font-size: 1.3vw; 
+    }
+
+    div#navigationText p{
+        margin: 0 auto;
+        font-size: 10px; 
+        font-size: 1vw;
+    }
+
     nav#navigation{
         overflow: hidden;
         text-align: center;
 
         border:1px solid var(--color-borders);
-        border-width:1px 0;
-    }
-
-    nav#navigation div#text{
-        position: absolute;
-        height: 70%;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-
-    nav#navigation div#text h1{
-        margin: 0 auto;
-        font-size: 10px; 
-        font-size: 1.3vw; 
-
-        border:1px solid var(--color-borders);
-        border-width:1px 0; 
-    }
-
-    nav#navigation div#text p{
-        margin: 0 auto;
-        font-size: 10px; 
-        font-size: 1vw;
+        border-width:0 1px 0 0;
     }
 
     nav#navigation .mobile{
@@ -150,53 +154,35 @@ body
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-    nav#navigation{
-        overflow: hidden;
+    div#navigationText{
+        position: absolute;
+        width: 20%;
+        bottom: 0;
+        left: 0;
 
         border:1px solid var(--color-borders);
         border-width:1px 0;
     }
 
-    nav#navigation div#text{
-        position: absolute;
-        width: 90%;
-        top: 0;
-        left: 0;
-    }
-
-    nav#navigation div#text h1{
+    div#navigationText h1{
         margin: 0 auto;
         font-size: 10px; 
-        font-size: 1.3vw; 
+        font-size: 2vh; 
     }
 
-    nav#navigation div#text p{
+    div#navigationText p{
         margin: 0 auto;
         font-size: 10px; 
-        font-size: 1vw;
+        font-size: 1.5vh;
     }
 
-    nav#navigation a
-    {
-      text-decoration: none;
-      color: #232323;
-      
-      transition: color 0.3s ease;
-    }
-    
-    nav#navigation a:hover
-    {
-      color: tomato;
+    nav#navigation{
+        overflow: hidden;
     }
     
     nav#navigation #menuToggle
     {
       display: block;
-      position: absolute;
-      height: 200%;
-      width: 10%;
-      right: 0;
-      top: 0;
       
       z-index: 1;
       
@@ -208,10 +194,10 @@ body
     {
       display: block;
       position: absolute;
-      width: 10%;
-      height: 100%;
       right: 0;
-      top: 0;
+      bottom: 0;
+      height: 3%;
+      width: 20%;
       
       cursor: pointer;
       
@@ -221,15 +207,26 @@ body
       -webkit-touch-callout: none;
     }
     
+    div#hamburger {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 3%;
+        width: 20%;
+    }
+
     /*
      * Just a quick hamburger
      */
-     nav#navigation #menuToggle span
+    div#hamburger span
     {
       display: block;
-      width: 32px;
+      width: 40px;
       height: 4px;
-      margin-top: 5px;
+      bottom: 0;
+      right: 0;
+      margin-top: 0px;
+      margin-bottom: 5px;
       position: relative;
       
       background: #cdcdcd;
@@ -244,12 +241,12 @@ body
                   opacity 0.55s ease;
     }
     
-    nav#navigation #menuToggle span:first-child
+    div#hamburger span:first-child
     {
       transform-origin: 0% 0%;
     }
     
-    nav#navigation #menuToggle span:nth-last-child(2)
+    div#hamburger span:nth-last-child(2)
     {
       transform-origin: 0% 100%;
     }
@@ -258,7 +255,7 @@ body
      * Transform all the slices of hamburger
      * into a crossmark.
      */
-     nav#navigation #menuToggle input:checked ~ span
+    div#menuToggle input:checked div#hamburger ~ span
     {
       opacity: 1;
       transform: rotate(45deg) translate(-2px, -1px);
@@ -266,18 +263,18 @@ body
     }
     
     /*
-     * But let's hide the middle one.
+     * Hide the middle one
      */
-    nav#navigation #menuToggle input:checked ~ span:nth-last-child(3)
+    div#menuToggle input:checked div#hamburger span:nth-last-child(3)
     {
       opacity: 0;
       transform: rotate(0deg) scale(0.2, 0.2);
     }
     
     /*
-     * Ohyeah and the last one should go the other direction
+     * Last one should go the other direction
      */
-    nav#navigation #menuToggle input:checked ~ span:nth-last-child(2)
+    div#menuToggle input:checked div#hamburger span:nth-last-child(2)
     {
       opacity: 1;
       transform: rotate(-45deg) translate(0, -1px);
@@ -287,37 +284,50 @@ body
      * Make this absolute positioned
      * at the top left of the screen
      */
-    nav#navigation #menuItems
+    ul#menuItems
     {
       position: absolute;
       width: 300px;
-      margin: 0 0 -100px 0;
       right: 0;
-      bottom: 0;
+      bottom: 3%;
+      opacity: 0;
 
       background: #ededed;
       list-style-type: none;
       -webkit-font-smoothing: antialiased;
       
       transform-origin: 0% 0%;
-      transform: translate(-100%, 0);
+      transform: translate(0, -500%);
       
       transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
-    nav#navigation #menuItems li
+    ul#menuItems li
     {
       padding: 10px 0;
       font-size: 22px;
     }
     
     /*
-     * And let's fade it in from the left
+     * And let's fade it in from the top
      */
-    nav#navigation #menuToggle input:checked ~ ul
+    div#menuToggle input:checked ~ ul
     {
       transform: scale(1.0, 1.0);
       opacity: 1;
+    }
+
+    ul#menuItems a
+    {
+      text-decoration: none;
+      color: #232323;
+      
+      transition: color 0.3s ease;
+    }
+    
+    ul#menuItems a:hover
+    {
+      color: tomato;
     }
 }
 
