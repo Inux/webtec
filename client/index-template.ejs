@@ -4,15 +4,48 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title><%= htmlWebpackPlugin.options.title %></title>
-        <meta name="description" content="Automation & AI">
+        <meta name="author" content="<%= htmlWebpackPlugin.options.author %>">
+        <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div id="animation"></div>
-        <div id="app"></div>        
-        <div id="featureoverview"></div>
-        <footer>
-            <p>&copy; Steve Ineichen 2017</p>
-        </footer>
+        <p id="desktop">Desktop</p>
+        <p id="tablet">Tablet</p>
+        <p id="smartphone">Smartphone</p>
+
+        <div id="footer">
+            <p><%= htmlWebpackPlugin.options.copyright %></p>
+        </div>
+
+        <div id="content">
+            <!-- Dynamic part -->
+            <div id="animation"></div>
+            <!-- div id="app"></div -->        
+            <div id="featureoverview"></div>
+        </div>
+    
+
+        <!-- Navigation -->
+        <div id="navigationText">
+            <h1>WEBTEC</h1>
+            <p>by Steve Ineichen</p>
+        </div>
+        <nav role="navigation" id="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" class="mobile"/>
+
+                <div id="hamburger">
+                    <span class="mobile"></span>
+                    <span class="mobile"></span>
+                    <span class="mobile"></span>
+                </div>
+               
+                <ul id="menuItems">
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Canvas</li></a>
+                    <a href="#"><li>Formular</li></a>
+                </ul>
+            </div>
+        </nav>
     </body>
 </html>

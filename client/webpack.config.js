@@ -2,7 +2,14 @@ const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './index.js',
+    entry: [
+        './index.js',
+        './styles/layout.css',
+        './styles/content.css',
+        './styles/nav.css',
+        './styles/footer.css',
+        './styles/device_label.css'
+    ],
     output: {
         path: path.resolve(__dirname, '../dest'),
         filename: 'app.js',
@@ -21,10 +28,18 @@ module.exports = {
             {
               test: /\.modernizrrc(\.json)?$/,
               use: [ 'modernizr-loader', 'json-loader' ]
+            },
+            {
+              test: /\.css$/,
+              use: [{
+                  loader: 'style-loader'
+              }, {
+                  loader: 'css-loader'
+              }]
             }
         ]
     },
-    resolve: {
+        resolve: {
         alias: {
           modernizr$: path.resolve(__dirname, ".modernizrrc")
         }
@@ -34,8 +49,10 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'webtec',
+            title: 'WEBTEC website of Steve Ineichen',
+            author: 'Steve Ineichen',
+            copyright: '&copy; Steve Ineichen 2017',
             template: 'index-template.ejs'
-        })       
+        })    
     ]
 }

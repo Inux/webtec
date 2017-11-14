@@ -1,0 +1,153 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    /* Desktop variables */
+    --max-width-desktop: 62%;
+    --nav-text-height-desktop: 9%;
+    --nav-height-desktop: 4%;
+    --nav-total-height-desktop: 13%;
+    --footer-height-desktop: 6%;
+
+    /* Tablet variables */
+    --width-tablet: 94%;
+    --nav-text-height-tablet: 20%;
+    --nav-width-tablet: 6%;
+    --footer-height-tablet: 3%;
+
+    /* Mobile variables */
+    --width-mobile: 100%;
+    --nav-height-mobile: 6%;
+    --footer-height-mobile: 3%;
+
+    background: #232323;
+    color: #cdcdcd;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+    div#navigationText{
+        position: absolute;
+        height: var(--nav-text-height-desktop);
+        min-width: 980px;
+        max-width: var(--max-width-desktop);
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    nav#navigation{
+        position: absolute;
+        height: var(--nav-height-desktop);
+        min-width: 980px;
+        max-width: var(--max-width-desktop);
+        top: var(--nav-text-height-desktop) ;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    div#content{
+        position: absolute;
+        min-width: 980px;
+        max-width: var(--max-width-desktop);
+        top: var(--nav-total-height-desktop);
+        bottom: var(--footer-height-desktop);
+        left: 0;
+        right: 0;
+        margin: 1px auto;
+    }
+
+    div#footer {
+        position: absolute;
+        height: var(--footer-height-desktop);
+        line-height: var(--footer-height-desktop);
+        min-width: 980px;
+        max-width: var(--max-width-desktop);
+        bottom: 0;
+        left: var(--left-desktop);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 979px) /* and (orientation: landscape) */ { 
+    div#navigationText{
+        position: absolute;
+        height: 20%;
+        width: var(--nav-width-tablet);
+        top: 0;
+        left: 0;
+        bottom: var(--footer-height-tablet);
+    }
+    
+    nav#navigation{
+        position: absolute;
+        height: 80%;
+        width: var(--nav-width-tablet);
+        left: 0;
+        bottom: 0;
+    }
+
+    div#content{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: var(--footer-height-tablet);
+        left: var(--nav-width-tablet);
+    }
+
+    div#footer {
+        position: absolute;
+        height: var(--footer-height-mobile);
+        width: 100%;
+        bottom: 0;
+        left: var(--nav-width-tablet);
+        right: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    div#navigationText{
+        position: absolute;
+        height: var(--nav-height-mobile);
+        width: 20%;
+        bottom: 0;
+        left: 0;
+    }
+    
+    nav#navigation{
+        position: absolute;
+        height: 100%;
+        width: 80%;
+        bottom: 0;
+        right: 0;
+    }
+
+    div#content{
+        position: absolute;
+        width: 100%;
+        top: var(--footer-height-mobile);
+        bottom: var(--nav-height-mobile);
+        right: 0;
+        left: 0;
+    }
+
+    div#footer {
+        position: absolute;
+        height: var(--footer-height-mobile);
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+

@@ -1,0 +1,44 @@
+body
+{
+    /* Generic variables */
+    --color-main: #cdcdcd;
+    --color-background: rgba(23,23,23,0);
+    --color-borders: #ccc;
+}
+
+div#content{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: -1;
+}
+
+div#content::-webkit-scrollbar{
+    background-color: var(--color-background);        
+}
+
+div#content::-webkit-scrollbar-track {
+    box-shadow: var(--color-background);
+    -webkit-box-shadow: var(--color-background);
+}
+
+div#content::-webkit-scrollbar-thumb {
+    background-color: var(--color-background);
+}
+
+div#content::-webkit-scrollbar-corner {
+    background: var(--color-background);
+}
+
+@media (min-width: 980px) { 
+    
+}
+
+/* Tablet landscape */
+@media (min-width: 768px) and (max-width: 979px) /* and (orientation: landscape) */ { 
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+}

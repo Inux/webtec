@@ -1,0 +1,43 @@
+body
+{
+    /* Generic variables */
+    --color-main: #cdcdcd;
+    --color-background: rgba(23,23,23,0);
+    --color-borders: #ccc;
+}
+
+div#footer {
+    overflow: hidden;
+
+    text-align: center;
+
+    border:1px solid var(--color-borders);
+    border-width:1px 0; 
+}
+
+/* Desktop */
+@media (min-width: 980px) { 
+    div#footer p {
+        font-size: 20px; 
+        font-size: 2vh; 
+    } 
+}
+
+/* Tablet landscape */
+@media (min-width: 768px) and (max-width: 979px) /* and (orientation: landscape) */ { 
+    div#footer p {
+        margin: 0 0;
+        font-size: 13px; 
+        font-size: 2vh;  
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    div#footer p {
+        margin: 0 0;
+        font-size: 13px; 
+        font-size: 2vh; 
+    }
+}
+
