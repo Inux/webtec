@@ -196,7 +196,7 @@ body
       position: absolute;
       right: 0;
       bottom: 0;
-      height: 3%;
+      height: 6%;
       width: 20%;
       
       cursor: pointer;
@@ -211,23 +211,22 @@ body
         position: absolute;
         right: 0;
         bottom: 0;
-        height: 3%;
+        height: 6%;
         width: 20%;
     }
 
     /*
      * Just a quick hamburger
      */
-    div#hamburger span
+    #menuToggle span.mobile
     {
       display: block;
       width: 40px;
-      height: 4px;
+      height: 10%;
       bottom: 0;
       right: 0;
-      margin-top: 0px;
-      margin-bottom: 5px;
       position: relative;
+      margin: 0.3em 0;
       
       background: #cdcdcd;
       border-radius: 3px;
@@ -240,44 +239,28 @@ body
                   background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                   opacity 0.55s ease;
     }
-    
-    div#hamburger span:first-child
-    {
-      transform-origin: 0% 0%;
-    }
-    
-    div#hamburger span:nth-last-child(2)
-    {
-      transform-origin: 0% 100%;
-    }
-    
-    /* 
-     * Transform all the slices of hamburger
-     * into a crossmark.
-     */
-    div#menuToggle input:checked div#hamburger ~ span
+
+    #menuToggle input:checked ~ #hamburger span.mobile:first-child
     {
       opacity: 1;
-      transform: rotate(45deg) translate(-2px, -1px);
-      background: #232323;
+      transform: rotate(45deg) translate(1px, -4px);
     }
     
     /*
      * Hide the middle one
      */
-    div#menuToggle input:checked div#hamburger span:nth-last-child(3)
+    #menuToggle input:checked ~ #hamburger span.mobile:nth-child(2)
     {
       opacity: 0;
-      transform: rotate(0deg) scale(0.2, 0.2);
     }
     
     /*
      * Last one should go the other direction
      */
-    div#menuToggle input:checked div#hamburger span:nth-last-child(2)
+     #menuToggle input:checked ~ #hamburger span.mobile:last-child
     {
       opacity: 1;
-      transform: rotate(-45deg) translate(0, -1px);
+      transform: rotate(-45deg);
     }
     
     /*
@@ -289,7 +272,7 @@ body
       position: absolute;
       width: 300px;
       right: 0;
-      bottom: 3%;
+      bottom: 6%;
       opacity: 0;
 
       background: #ededed;
@@ -327,7 +310,7 @@ body
     
     ul#menuItems a:hover
     {
-      color: tomato;
+      color: darkred;
     }
 }
 

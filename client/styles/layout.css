@@ -60,7 +60,7 @@ body
         bottom: var(--footer-height-desktop);
         left: 0;
         right: 0;
-        margin: 0 auto;
+        margin: 1px auto;
     }
 
     div#footer {
