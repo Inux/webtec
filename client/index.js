@@ -1,9 +1,14 @@
-console.time("loading");
+const jq = require("jquery");
+jq("#content").load("home.html");
 
-//Mithril
-var m = require("mithril");
-var foverview = require("./modules/featureoverview/featureoverview.js")
-var fo = document.getElementById("featureoverview");
-m.render(fo, m(foverview));
+jq("#navHome").click(function() {
+    jq("#content").load("home.html");
+});
 
-console.timeEnd("loading");
+jq("#navCanvas").click(function() {
+    jq("#content").load("canvas.html");
+});
+
+jq("#navFormular").click(function() {
+    jq("#content").load("formular.html");
+});
