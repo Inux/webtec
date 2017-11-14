@@ -7,11 +7,14 @@ body
 
     /* Desktop variables */
     --max-width-desktop: 62%;
-    --nav-height-desktop: 13%;
+    --nav-text-height-desktop: 9%;
+    --nav-height-desktop: 4%;
+    --nav-total-height-desktop: 13%;
     --footer-height-desktop: 6%;
 
     /* Tablet variables */
     --width-tablet: 94%;
+    --nav-text-height-tablet: 20%;
     --nav-width-tablet: 6%;
     --footer-height-tablet: 3%;
 
@@ -27,12 +30,23 @@ body
 
 /* Desktop */
 @media (min-width: 980px) {
+    div#navigationText{
+        position: absolute;
+        height: var(--nav-text-height-desktop);
+        min-width: 980px;
+        max-width: var(--max-width-desktop);
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
     nav#navigation{
         position: absolute;
         height: var(--nav-height-desktop);
         min-width: 980px;
         max-width: var(--max-width-desktop);
-        top: 0;
+        top: var(--nav-text-height-desktop) ;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -42,7 +56,7 @@ body
         position: absolute;
         min-width: 980px;
         max-width: var(--max-width-desktop);
-        top: var(--nav-height-desktop);
+        top: var(--nav-total-height-desktop);
         bottom: var(--footer-height-desktop);
         left: 0;
         right: 0;
@@ -52,6 +66,7 @@ body
     div#footer {
         position: absolute;
         height: var(--footer-height-desktop);
+        line-height: var(--footer-height-desktop);
         min-width: 980px;
         max-width: var(--max-width-desktop);
         bottom: 0;
@@ -64,13 +79,21 @@ body
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 979px) /* and (orientation: landscape) */ { 
-    nav#navigation{
+    div#navigationText{
         position: absolute;
-        height: 100%;
+        height: 20%;
         width: var(--nav-width-tablet);
         top: 0;
         left: 0;
         bottom: var(--footer-height-tablet);
+    }
+    
+    nav#navigation{
+        position: absolute;
+        height: 80%;
+        width: var(--nav-width-tablet);
+        left: 0;
+        bottom: 0;
     }
 
     div#content{
@@ -93,12 +116,19 @@ body
 
 /* Mobile */
 @media (max-width: 768px) {
+    div#navigationText{
+        position: absolute;
+        height: var(--nav-height-mobile);
+        width: 20%;
+        bottom: 0;
+        left: 0;
+    }
+    
     nav#navigation{
         position: absolute;
         height: var(--nav-height-mobile);
-        width: 100%;
+        width: 80%;
         bottom: 0;
-        left: 0;
         right: 0;
     }
 

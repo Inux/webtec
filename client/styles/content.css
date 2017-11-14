@@ -1,6 +1,7 @@
 body
 {
     /* Generic variables */
+    --color-main: #cdcdcd;
     --color-background: rgba(23,23,23,0);
     --color-borders: #ccc;
 }
