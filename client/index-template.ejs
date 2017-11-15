@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><%= htmlWebpackPlugin.options.title %></title>
-        <meta name="author" content="<%= htmlWebpackPlugin.options.author %>">
-        <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+        <meta name="author" content="<%= htmlWebpackPlugin.options.author %>">
     </head>
     <body>
         <p id="desktop">Desktop</p>
@@ -17,16 +17,16 @@
             <p><%= htmlWebpackPlugin.options.copyright %></p>
         </div>
 
+
         <div id="content">
         </div>
-    
 
-        <!-- Navigation -->
+
         <div id="navigationText">
             <h1>WEBTEC</h1>
             <p>by Steve Ineichen</p>
         </div>
-        <nav role="navigation" id="navigation">
+        <nav id="navigation">
             <div id="menuToggle">
                 <input type="checkbox" class="mobile"/>
 
@@ -37,9 +37,9 @@
                 </div>
                
                 <ul id="menuItems">
-                    <a id="navHome"><li>Home</li></a>
-                    <a id="navCanvas"><li>Canvas</li></a>
-                    <a id="navFormular"><li>Formular</li></a>
+                    <li><a id="navHome">Home</a></li>
+                    <li><a id="navCanvas">Canvas</a></li>
+                    <li><a id="navFormular">Formular</a></li>
                 </ul>
             </div>
         </nav>
