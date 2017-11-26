@@ -12,8 +12,6 @@
         font-size: 20px; 
         font-size: 2vh; 
 
-        z-index: 1;
-
         -webkit-animation: fadeout 3s linear forwards;
         animation: fadeout 3s linear forwards;
     }
@@ -45,8 +43,6 @@
         font-size: 20px; 
         font-size: 2vh; 
 
-        z-index: 1;
-
         -webkit-animation: fadeout 3s linear forwards;
         animation: fadeout 3s linear forwards;
     }
@@ -77,8 +73,6 @@
 
         font-size: 20px; 
         font-size: 2vh; 
-
-        z-index: 1;
 
         -webkit-animation: fadeout 3s linear forwards;
         animation: fadeout 3s linear forwards;
