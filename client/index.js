@@ -32,13 +32,15 @@ if(pageck != '' && pageck != null) {
 }
 
 //Add click listeners to menu (based on pagesConfig)
-for (var i = 0; i < pagesConfig.length; i++) {
+for (let i = 0; i < pagesConfig.length; i++) {
     let page = pagesConfig[i];
     jq(page.menu).click(
         function() {
-            qk.set('page', page.page, { expires: 7 });
             jq(content).load(page.page);
+            qk.set('page', page.page);
+            console.log("pressed on menu: "+page.menu);
         }
     );
 }
+
 
