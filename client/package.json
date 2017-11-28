@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "webpack -d --watch",
-    "build": "webpack -p",
+    "build": "webpack",
     "devserver": "webpack-dev-server --content-base ../dest --hot"
   },
   "devDependencies": {}
