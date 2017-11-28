@@ -68,6 +68,14 @@ const home = {
             {
               test: /\.modernizrrc(\.json)?$/,
               use: [ 'modernizr-loader', 'json-loader' ]
+            },
+            {
+              test: /\.css$/,
+              use: [{
+                  loader: 'style-loader'
+              }, {
+                  loader: 'css-loader'
+              }]
             }
         ]
     },
@@ -101,7 +109,17 @@ const canvas = {
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader'
-        }]
+        }],
+        rules: [
+            {
+              test: /\.css$/,
+              use: [{
+                  loader: 'style-loader'
+              }, {
+                  loader: 'css-loader'
+              }]
+            }
+        ]
     },
     node: {
         fs: "empty"
@@ -128,7 +146,17 @@ const formular = {
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader'
-        }]
+        }],
+        rules: [
+            {
+              test: /\.css$/,
+              use: [{
+                  loader: 'style-loader'
+              }, {
+                  loader: 'css-loader'
+              }]
+            }
+        ]
     },
     node: {
         fs: "empty"
@@ -141,4 +169,42 @@ const formular = {
     ]
 }
 
-module.exports = [index, home, canvas, formular];
+//Build styleswitcher.html and styleswitcher.js
+const styleswitcher = {
+    entry: [
+        './pages/styleswitcher/styleswitcher.js',
+        './pages/styleswitcher/styleswitcher.css'
+    ],
+    output: {
+        path: path.resolve(__dirname, '../dest'),
+        filename: "styleswitcher.js",
+    },
+    module: {
+        loaders: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader'
+        }],
+        rules: [
+            {
+              test: /\.css$/,
+              use: [{
+                  loader: 'style-loader'
+              }, {
+                  loader: 'css-loader'
+              }]
+            }
+        ]
+    },
+    node: {
+        fs: "empty"
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'styleswitcher.html',
+            template: './pages/styleswitcher/styleswitcher-template.ejs'
+        })  
+    ]
+}
+
+module.exports = [index, home, canvas, formular, styleswitcher];

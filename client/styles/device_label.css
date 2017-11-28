@@ -12,18 +12,22 @@
         font-size: 20px; 
         font-size: 2vh; 
 
-        z-index: 1;
-
         -webkit-animation: fadeout 3s linear forwards;
         animation: fadeout 3s linear forwards;
     }
 
     p#tablet{
         opacity: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
     }
 
     p#smartphone{
         opacity: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
     }
 }
 
@@ -31,6 +35,9 @@
 @media (min-width: 768px) and (max-width: 979px) {  
     p#desktop{
         opacity: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
     }
 
     p#tablet{
@@ -44,8 +51,6 @@
 
         font-size: 20px; 
         font-size: 2vh; 
-
-        z-index: 1;
 
         -webkit-animation: fadeout 3s linear forwards;
         animation: fadeout 3s linear forwards;
@@ -53,6 +58,9 @@
 
     p#smartphone{
         opacity: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
     }
 }
 
@@ -60,10 +68,16 @@
 @media (max-width: 768px) {
     p#desktop{
         opacity: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
     }
 
     p#tablet{
         opacity: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
     }
 
     p#smartphone{
@@ -77,8 +91,6 @@
 
         font-size: 20px; 
         font-size: 2vh; 
-
-        z-index: 1;
 
         -webkit-animation: fadeout 3s linear forwards;
         animation: fadeout 3s linear forwards;
