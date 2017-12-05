@@ -9,7 +9,8 @@ const index = {
         './styles/content.css',
         './styles/nav.css',
         './styles/footer.css',
-        './styles/device_label.css'
+        './styles/device_label.css',
+        './styles/vars.css'
     ],
     output: {
         path: path.resolve(__dirname, '../dest'),
@@ -173,7 +174,7 @@ const formular = {
 const styleswitcher = {
     entry: [
         './pages/styleswitcher/styleswitcher.js',
-        './pages/styleswitcher/styleswitcher.css'
+        './pages/styleswitcher/styleswitcher.css',
     ],
     output: {
         path: path.resolve(__dirname, '../dest'),

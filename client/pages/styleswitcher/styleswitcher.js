@@ -11,12 +11,12 @@ const styleOrder = [
 const styleConfig = {
     dark: [
         "#cdcdcd",
-        "rgba(23,23,23,0)",
+        "#232323",
         "#ccc"
     ],
     light: [
         "#232323",
-        "rgba(205,205,205,1)",
+        "#cdcdcd",
         "#333"
     ]
 }

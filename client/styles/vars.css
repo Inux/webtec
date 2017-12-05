@@ -1,6 +1,7 @@
 body {
-    /* Colors and Font */
+    /* Colors */
     --color-main: #cdcdcd;
-    --color-background: rgba(23,23,23,0);
+    --color-background: #232323;
     --color-borders: #ccc;
+    font-family: "Avenir Next", "Avenir", sans-serif;
 }
