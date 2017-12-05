@@ -1,3 +1,5 @@
+@import "vars.css";
+
 div#content{
     overflow-x: hidden;
     overflow-y: scroll;

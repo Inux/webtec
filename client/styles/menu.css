@@ -1,8 +1,10 @@
+@import "vars.css";
+
 @media screen and (min-width: 0px) and (max-width: 479px) {
     a
     {
       text-decoration: none;
-      color: #232323;
+      color: var(--color-background);
       
       transition: color 0.3s ease;
     }
@@ -53,7 +55,7 @@
       margin-bottom: 5px;
       position: relative;
       
-      background: #cdcdcd;
+      background: var(--color-main);
       border-radius: 3px;
       
       z-index: 1;
@@ -83,7 +85,7 @@
     {
       opacity: 1;
       transform: rotate(45deg) translate(-2px, -1px);
-      background: #232323;
+      background: var(--color-background);
     }
     
     /*
@@ -116,7 +118,7 @@
       padding: 50px;
       padding-top: 125px;
       
-      background: #ededed;
+      background: var(--color-main);
       list-style-type: none;
       -webkit-font-smoothing: antialiased;
       

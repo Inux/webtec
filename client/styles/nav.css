@@ -1,3 +1,5 @@
+@import "vars.css";
+
 /* Desktop landscape */
 @media (min-width: 980px) { 
     div#navigationText{
