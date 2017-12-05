@@ -1,3 +1,18 @@
+@import 'vars.css';
+
+div#navigationText {
+    color: var(--color-main);
+    background-color: var(--color-background);
+}
+
+nav#navigation {
+    pointer-events: none
+}
+
+div#menuToggle {
+    pointer-events: auto;
+}
+
 /* Desktop landscape */
 @media (min-width: 980px) { 
     div#navigationText{
@@ -170,7 +185,6 @@
 
     nav#navigation{
         overflow: hidden;
-        
     }
     
     nav#navigation #menuToggle
@@ -218,7 +232,7 @@
         position: relative;
         margin: 0.3em 0;
         
-        background: #cdcdcd;
+        background: var(--color-main);
         border-radius: 3px;
         
         z-index: 1;
@@ -255,7 +269,7 @@
         bottom: 6%;
         opacity: 0;
 
-        background: #ededed;
+        background: var(--color-main);
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         

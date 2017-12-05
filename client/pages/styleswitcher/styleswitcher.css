@@ -1,0 +1,28 @@
+div#styleSwitcher{
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+
+form{
+    position: relative;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+fieldset#fieldset{
+    position: relative;
+    z-index: 999;
+}
+
+input {
+    position: relative;
+    z-index: 999; 
+}
+
+label {
+    position: relative;
+    z-index: 999;
+}
