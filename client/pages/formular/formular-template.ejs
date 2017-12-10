@@ -1,4 +1,50 @@
 <!doctype html>
-<div id="formular">
-    <h1>ToDo: Formular</h1>
+<div>
+    <h1>Formular</h1>
+    <form id="formular">
+        <table>
+            <tr>
+                <td>
+                    <label for="vname">Vorname:</label>
+                </td>
+                <td>
+                    <input type="text" id="vname" name="vname" placeholder="Vorname eingeben...">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nname">Nachname:</label>
+                </td>
+                <td>
+                    <input type="text" id="nname" name="nname" placeholder="Nachname eingeben...">                
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email:</label>
+                </td>
+                <td>
+                    <input type="text" id="email" name="email" placeholder="Email eingeben...">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nachricht">Nachricht:</label>
+                </td>
+                <td>
+                    <input type="text" id="nachricht" name="nachricht" placeholder="Nachricht eingeben...">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" id="submitFormular" value="Senden">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div id="formularError">
+    <h1>Fehler</h1>
+    <p id="formularErrorText"></p>
 </div>

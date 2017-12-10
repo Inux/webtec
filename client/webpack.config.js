@@ -50,6 +50,7 @@ const index = {
 const home = {
     entry: [
         './pages/home/home.js',
+        './pages/home/home.css'
     ],
     output: {
         path: path.resolve(__dirname, '../dest'),
@@ -137,6 +138,7 @@ const canvas = {
 const formular = {
     entry: [
         './pages/formular/formular.js',
+        './pages/formular/formular.css'
     ],
     output: {
         path: path.resolve(__dirname, '../dest'),
