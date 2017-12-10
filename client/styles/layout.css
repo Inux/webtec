@@ -1,5 +1,6 @@
-body
-{
+@import 'vars.css';
+
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -23,9 +24,7 @@ body
     --nav-height-mobile: 6%;
     --footer-height-mobile: 3%;
 
-    background: #232323;
-    color: #cdcdcd;
-    font-family: "Avenir Next", "Avenir", sans-serif;
+    background-color: var(--color-background);
 }
 
 /* Desktop */

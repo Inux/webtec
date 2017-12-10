@@ -9,7 +9,8 @@ const index = {
         './styles/content.css',
         './styles/nav.css',
         './styles/footer.css',
-        './styles/device_label.css'
+        './styles/device_label.css',
+        './styles/vars.css'
     ],
     output: {
         path: path.resolve(__dirname, '../dest'),
@@ -49,6 +50,7 @@ const index = {
 const home = {
     entry: [
         './pages/home/home.js',
+        './pages/home/home.css'
     ],
     output: {
         path: path.resolve(__dirname, '../dest'),
@@ -68,6 +70,14 @@ const home = {
             {
               test: /\.modernizrrc(\.json)?$/,
               use: [ 'modernizr-loader', 'json-loader' ]
+            },
+            {
+              test: /\.css$/,
+              use: [{
+                  loader: 'style-loader'
+              }, {
+                  loader: 'css-loader'
+              }]
             }
         ]
     },
@@ -91,6 +101,7 @@ const home = {
 const canvas = {
     entry: [
         './pages/canvas/canvas.js',
+        './pages/canvas/canvas.css'
     ],
     output: {
         path: path.resolve(__dirname, '../dest'),
@@ -101,7 +112,17 @@ const canvas = {
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader'
-        }]
+        }],
+        rules: [
+            {
+              test: /\.css$/,
+              use: [{
+                  loader: 'style-loader'
+              }, {
+                  loader: 'css-loader'
+              }]
+            }
+        ]
     },
     node: {
         fs: "empty"
@@ -118,6 +139,7 @@ const canvas = {
 const formular = {
     entry: [
         './pages/formular/formular.js',
+        './pages/formular/formular.css'
     ],
     output: {
         path: path.resolve(__dirname, '../dest'),
@@ -128,7 +150,17 @@ const formular = {
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader'
-        }]
+        }],
+        rules: [
+            {
+              test: /\.css$/,
+              use: [{
+                  loader: 'style-loader'
+              }, {
+                  loader: 'css-loader'
+              }]
+            }
+        ]
     },
     node: {
         fs: "empty"
@@ -141,4 +173,42 @@ const formular = {
     ]
 }
 
-module.exports = [index, home, canvas, formular];
+//Build styleswitcher.html and styleswitcher.js
+const styleswitcher = {
+    entry: [
+        './pages/styleswitcher/styleswitcher.js',
+        './pages/styleswitcher/styleswitcher.css',
+    ],
+    output: {
+        path: path.resolve(__dirname, '../dest'),
+        filename: "styleswitcher.js",
+    },
+    module: {
+        loaders: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader'
+        }],
+        rules: [
+            {
+              test: /\.css$/,
+              use: [{
+                  loader: 'style-loader'
+              }, {
+                  loader: 'css-loader'
+              }]
+            }
+        ]
+    },
+    node: {
+        fs: "empty"
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'styleswitcher.html',
+            template: './pages/styleswitcher/styleswitcher-template.ejs'
+        })  
+    ]
+}
+
+module.exports = [index, home, canvas, formular, styleswitcher];

@@ -1,15 +1,12 @@
-body
-{
-    /* Generic variables */
-    --color-main: #cdcdcd;
-    --color-background: rgba(23,23,23,0);
-    --color-borders: #ccc;
-}
+@import 'vars.css';
 
 div#content{
     overflow-x: hidden;
     overflow-y: scroll;
     z-index: -1;
+
+    color: var(--color-main);
+    background-color: var(--color-background);
 }
 
 div#content::-webkit-scrollbar{

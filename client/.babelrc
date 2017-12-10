@@ -1,8 +1,0 @@
-{
-    "presets": ["es2016"],
-    "plugins": [
-        ["transform-react-jsx", {
-            "pragma": "m"
-        }]
-    ]
-}

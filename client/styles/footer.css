@@ -1,10 +1,4 @@
-body
-{
-    /* Generic variables */
-    --color-main: #cdcdcd;
-    --color-background: rgba(23,23,23,0);
-    --color-borders: #ccc;
-}
+@import 'vars.css';
 
 div#footer {
     overflow: hidden;
@@ -13,6 +7,9 @@ div#footer {
 
     border:1px solid var(--color-borders);
     border-width:1px 0; 
+
+    color: var(--color-main);
+    background-color: var(--color-background);
 }
 
 /* Desktop */
