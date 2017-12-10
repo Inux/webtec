@@ -8,11 +8,11 @@ This repository contains the website of Steve Ineichen for the subject WEBTEC.
 - [x] b.) One Page
 - [x] c.) Home, Canvas, Formular menu's
 - - [x] 1.) Home (feature overview)
-- - [ ] 2.) Canvas (moving ball)
-- - [ ] 3.) Formular (contact formular)
+- - [x] 2.) Canvas (moving ball)
+- - [x] 3.) Formular (contact formular)
 - [x] e.) Responsive design (mobile, tablet, desktop)
-- [ ] f.) Style switcher
-- - [ ] 1.) Cookie (style switcher settings)
+- [x] f.) Style switcher
+- - [x] 1.) Cookie (style switcher settings)
 
 ## Installation
 
