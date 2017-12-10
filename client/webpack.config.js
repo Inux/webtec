@@ -101,6 +101,7 @@ const home = {
 const canvas = {
     entry: [
         './pages/canvas/canvas.js',
+        './pages/canvas/canvas.css'
     ],
     output: {
         path: path.resolve(__dirname, '../dest'),
