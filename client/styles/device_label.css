@@ -16,6 +16,10 @@
 
         -webkit-animation: fadeout 3s linear forwards;
         animation: fadeout 3s linear forwards;
+
+        color: var(--color-main);
+
+        z-index: 300;
     }
 
     p#tablet{
@@ -56,6 +60,10 @@
 
         -webkit-animation: fadeout 3s linear forwards;
         animation: fadeout 3s linear forwards;
+
+        color: var(--color-main);
+
+        z-index: 300;
     }
 
     p#smartphone{
@@ -96,6 +104,10 @@
 
         -webkit-animation: fadeout 3s linear forwards;
         animation: fadeout 3s linear forwards;
+
+        color: var(--color-main);
+
+        z-index: 300;
     } 
 }
 

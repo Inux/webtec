@@ -44,8 +44,8 @@ if(style != '' && style != null) {
         jq("#lightRadioBtn").prop("checked", true);
     }
 } else {
-    setStyle(styleConfig.light);
-    jq("#lightRadioBtn").prop("checked", true);
+    setStyle(styleConfig.dark);
+    jq("#darkRadioBtn").prop("checked", true);
 }
 
 jq("#darkRadioBtn").click(
